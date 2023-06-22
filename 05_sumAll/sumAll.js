@@ -1,5 +1,13 @@
-const sumAll = function() {
+const sumAll = function(first, second) {
+    let start = first;
+    let end = second;
+    let sum = 0;
 
+    for(let i = start; i <= end; i++) {
+        sum += i;
+    }
+
+    return sum;
 };
 
 // Do not edit below this line
