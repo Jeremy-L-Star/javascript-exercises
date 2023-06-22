@@ -1,10 +1,13 @@
 // first version, just remove a single value
 
 
-const removeFromArray = function(ary, removeValue) {
-    let removeValueIndex = ary.findIndex((n) => n === removeValue);
-    ary.splice(removeValueIndex, 1);
-    return ary;
+const removeFromArray = function(ary, ...removeValues) {
+    // let removeValueIndex = ary.findIndex((n) => n === removeValue);
+    // ary.splice(removeValueIndex, 1);
+    // return ary;
+
+    // return only the elements that we are NOT removing from the array
+    return ary.filter((value) => !removeValues.includes(value));
 };
 
 // later version: using spread operator, filter() the input Array `ary`.
