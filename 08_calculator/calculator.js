@@ -13,8 +13,11 @@ const sum = function(values) {
   }, 0);
 };
 
-const multiply = function() {
-
+const multiply = function(...args) {
+	return args.reduce((totalSum, value) => {
+    // console.log(`totalSum, value: ${totalSum}, ${value}`);
+    return totalSum * value;
+  });
 };
 
 const power = function() {
