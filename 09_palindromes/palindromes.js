@@ -12,7 +12,7 @@ const palindromes = function (input) {
     const letterStr = /\w/g; // only match words, not whitespace
 
     let noWs = input.match(letterStr);
-    console.log(noWs);
+    // console.log(noWs);
 
     const halfStringLength = noWs.length / 2;
     const lastChar = noWs.length - 1;
@@ -20,7 +20,10 @@ const palindromes = function (input) {
     for(let i = 0; i < halfStringLength; i++) {
         console.log(noWs.length);
         console.log(`iteration ${i}: index ${i}: ${noWs[i]}, index ${lastChar - i}: ${noWs[lastChar - i]}`);
-        if(noWs[i] !== noWs[lastChar - i]) return false;
+
+        const curCharLeft = noWs[i].toLowerCase;
+        const curCharRight = noWs[lastChar - i].toLowerCase;
+        if(curCharLeft !== curCharRight) return false;
     };
 
     return true;
