@@ -15,6 +15,8 @@ const palindromes = function (input) {
     const halfStringLength = noWs.length / 2;
     const lastChar = noWs.length - 1; // index of last char in the string
 
+    // variables are hoisted to the top of the scope.
+    // variables should be declared at the top of the function.
     let curCharLeft;
     let curCharRight;
 
