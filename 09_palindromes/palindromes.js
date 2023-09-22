@@ -10,22 +10,21 @@
 
 const palindromes = function (input) {
     const letterStr = /\w/g; // only match words, not whitespace
-
     let noWs = input.match(letterStr);
-    // console.log(noWs);
-
+    
     const halfStringLength = noWs.length / 2;
-    const lastChar = noWs.length - 1;
+    const lastChar = noWs.length - 1; // index of last char in the string
+
+    let curCharLeft;
+    let curCharRight;
 
     for(let i = 0; i < halfStringLength; i++) {
-        console.log(noWs.length);
-        console.log(`iteration ${i}: index ${i}: ${noWs[i]}, index ${lastChar - i}: ${noWs[lastChar - i]}`);
-
-        const curCharLeft = noWs[i].toLowerCase;
-        const curCharRight = noWs[lastChar - i].toLowerCase;
+        // convert the current character from the left and right side of the string to lowercase. The function needs to be case-insensitive.
+        curCharLeft = noWs[i].toLowerCase();
+        curCharRight = noWs[lastChar - i].toLowerCase();
+        console.log(`iteration ${i}: ${curCharLeft} ${curCharRight}`);
         if(curCharLeft !== curCharRight) return false;
     };
-
     return true;
 }
 
