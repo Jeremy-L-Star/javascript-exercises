@@ -5,7 +5,7 @@
 // 3rd = 1st + 2nd. 4th = 3rd + 2nd. 5th = 4th + 3rd, etc
 
 /**
- * Return the nth Fibonacci number.
+ * Return the n-th Fibonacci number.
  * Note that the spec doesn't count 0 as a fibonacci number.
  * If it did, the 6th fibonacci number would be 5 (NOT 8).
  * I have added 0 to the base case to prevent a stack overflow,
